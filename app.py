@@ -12,7 +12,7 @@ from datetime import datetime
 import dash_table
 import pandas as pd
 import numpy as np
-from layout import header,salesMetrics, salesMetricResults
+from layout import header,salesMetrics
 import os
 ########### Define your variables
 
@@ -45,7 +45,6 @@ app.layout = html.Div(children=[
     dcc.Location(id='url',refresh=False),
     header,
     salesMetrics,
-    salesMetricResults,
 
     ]
 )

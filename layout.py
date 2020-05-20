@@ -28,101 +28,85 @@ salesMetrics = html.Div(
     className="row p-4 mb-2",
     children = [
         html.Div(className = "col-lg-4", children = [
-            html.H2("Sales Process Metrics"),
+            html.H2(className="mb-2",children="Sales Process"),
+            html.Div(className="row",children=[
+                    html.Div(className = "col-lg-12 mb-4", children = [
+                    html.Div(className="card shadow",children=[
+                        html.Div(className="card-header",children=html.H4("Sales Process Metric 1")),
+                        html.Div(className="card-body",children=html.H5("Card Body"))
+
+                    ]),
+                ]),
+                html.Div(className = "col-lg-12 mb-4", children = [
+                                    html.Div(className="card shadow",children=[
+                        html.Div(className="card-header",children=html.H4("Sales Process Metric 2")),
+                        html.Div(className="card-body",children=html.H5("Card Body"))
+
+                    ]),
+                ]),
+                html.Div(className = "col-lg-12 mb-4", children = [
+                        html.Div(className="card shadow",children=[
+                        html.Div(className="card-header",children=html.H4("Sales Process Metric 3")),
+                        html.Div(className="card-body",children=html.H5("Card Body"))
+
+                    ]),
+                ]),
+            ]),
+   
+        ]),
+        html.Div(className = "col-lg-4", children = [
+            html.H2(className="mb-2",children="Sales Activity"),
+            html.Div(className="row",children=[
+                    html.Div(className = "col-lg-12 mb-4", children = [
+                    html.Div(className="card shadow",children=[
+                        html.Div(className="card-header",children=html.H4("Sales Activity Metric 1")),
+                        html.Div(className="card-body",children=html.H5("Card Body"))
+
+                    ]),
+                ]),
+                html.Div(className = "col-lg-12 mb-4", children = [
+                                    html.Div(className="card shadow",children=[
+                        html.Div(className="card-header",children=html.H4("Sales Activity Metric 2")),
+                        html.Div(className="card-body",children=html.H5("Card Body"))
+
+                    ]),
+                ]),
+                html.Div(className = "col-lg-12 mb-4", children = [
+                        html.Div(className="card shadow",children=[
+                        html.Div(className="card-header",children=html.H4("Sales Activity Metric 3")),
+                        html.Div(className="card-body",children=html.H5("Card Body"))
+
+                    ]),
+                ]),
+            ]),
 
         ]),
         html.Div(className = "col-lg-4", children = [
-            html.H2("Sales Activity Metrics")
-        ]),
-        html.Div(className = "col-lg-4", children = [
-            html.H2("Sales Result Metrics")
-        ]),
-    ]
-)
+            html.H2(className="mb-2",children="Sales Result"),
+                html.Div(className="row",children=[
+                        html.Div(className = "col-lg-12 mb-4", children = [
+                        html.Div(className="card shadow",children=[
+                            html.Div(className="card-header",children=html.H4("Sales Result Metric 1")),
+                            html.Div(className="card-body",children=html.H5("Card Body"))
 
-salesMetricResults = html.Div(
-    children=[
+                        ]),
+                    ]),
+                    html.Div(className = "col-lg-12 mb-4", children = [
+                                        html.Div(className="card shadow",children=[
+                            html.Div(className="card-header",children=html.H4("Sales Result Metric 2")),
+                            html.Div(className="card-body",children=html.H5("Card Body"))
 
-    ###### Metric Row
-    html.Div(
-        className="row p-4 mb-2",
-            children = [
-                html.Div(className = "col-lg-4", children = [
-                    html.Div(className="card shadow",children=[
-                        html.Div(className="card-header",children=html.H4("Opportunity")),
-                        html.Div(className="card-body",children=html.H5("Card Body"))
+                        ]),
+                    ]),
+                    html.Div(className = "col-lg-12 mb-4", children = [
+                            html.Div(className="card shadow",children=[
+                            html.Div(className="card-header",children=html.H4("Sales Result Metric 3")),
+                            html.Div(className="card-body",children=html.H5("Card Body"))
 
+                        ]),
                     ]),
                 ]),
-                html.Div(className = "col-lg-4", children = [
-                                    html.Div(className="card shadow",children=[
-                        html.Div(className="card-header",children=html.H4("Opportunity")),
-                        html.Div(className="card-body",children=html.H5("Card Body"))
+            ])
 
-                    ]),
-                ]),
-                html.Div(className = "col-lg-4", children = [
-                                    html.Div(className="card shadow",children=[
-                        html.Div(className="card-header",children=html.H4("Opportunity")),
-                        html.Div(className="card-body",children=html.H5("Card Body"))
-
-                    ]),
-                ]),
-            ]
-    ),##### End Metric Row
-    html.Div(
-        className="row p-4 mb-2",
-            children = [
-                html.Div(className = "col-lg-4", children = [
-                    html.Div(className="card shadow",children=[
-                        html.Div(className="card-header",children=html.H4("Opportunity")),
-                        html.Div(className="card-body",children=html.H5("Card Body"))
-
-                    ]),
-                ]),
-                html.Div(className = "col-lg-4", children = [
-                                    html.Div(className="card shadow",children=[
-                        html.Div(className="card-header",children=html.H4("Opportunity")),
-                        html.Div(className="card-body",children=html.H5("Card Body"))
-
-                    ]),
-                ]),
-                html.Div(className = "col-lg-4", children = [
-                                    html.Div(className="card shadow",children=[
-                        html.Div(className="card-header",children=html.H4("Opportunity")),
-                        html.Div(className="card-body",children=html.H5("Card Body"))
-
-                    ]),
-                ]),
-            ]
-    ),##### End Metric Row
-    html.Div(
-        className="row p-4 mb-2",
-            children = [
-                html.Div(className = "col-lg-4", children = [
-                    html.Div(className="card shadow",children=[
-                        html.Div(className="card-header",children=html.H4("Opportunity")),
-                        html.Div(className="card-body",children=html.H5("Card Body"))
-
-                    ]),
-                ]),
-                html.Div(className = "col-lg-4", children = [
-                                    html.Div(className="card shadow",children=[
-                        html.Div(className="card-header",children=html.H4("Opportunity")),
-                        html.Div(className="card-body",children=html.H5("Card Body"))
-
-                    ]),
-                ]),
-                html.Div(className = "col-lg-4", children = [
-                                    html.Div(className="card shadow",children=[
-                        html.Div(className="card-header",children=html.H4("Opportunity")),
-                        html.Div(className="card-body",children=html.H5("Card Body"))
-
-                    ]),
-                ]),
-            ]
-    ),##### End Metric Row
-    ]
-)
-############################################################### End of salesMetricResults
+])#end metrics
 
