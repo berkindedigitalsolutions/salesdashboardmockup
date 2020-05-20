@@ -12,6 +12,7 @@ from dash.dependencies import Input, Output
 from datetime import datetime
 import dash_table
 import pandas as pd
+import dash_bootstrap_components as dbc
 
 #making some changes
 header = html.Div(
@@ -24,11 +25,41 @@ header = html.Div(
 
 ])
 
+
+########################## GRAPHS ##################################################
+customer_intelligence_fig = dcc.Graph(
+    figure=go.Figure(go.Bar(
+            x=[20, 14, 23],
+            y=['giraffes', 'orangutans', 'monkeys'],
+            orientation='h')))
+
+
+#####################################################################################
+progress = html.Div(
+    className="col-8",
+    children = [
+        html.H4(className="medium font-weight-bold",children=[
+            html.P('Key Account Plans Created'),
+            html.Div(className="progress mb-4",
+            children=html.Div(
+                className="progress-bar",
+                role="progressbar",
+     
+            )
+            )
+            
+        ])
+    ]
+)
+
+
+
+
 salesMetrics = html.Div(
     className="row p-4 mb-2",
     children = [
         html.Div(className = "col-lg-4", children = [
-            html.H2(className="mb-2",children="Sales Process"),
+            html.H2(className="mb-4",children="Sales Process"),
             html.Div(className="row",children=[
                     html.Div(className = "col-lg-12 mb-4", children = [
                     html.Div(className="card shadow",children=[
@@ -55,12 +86,12 @@ salesMetrics = html.Div(
    
         ]),
         html.Div(className = "col-lg-4", children = [
-            html.H2(className="mb-2",children="Sales Activity"),
+            html.H2(className="mb-4",children="Sales Activity"),
             html.Div(className="row",children=[
                     html.Div(className = "col-lg-12 mb-4", children = [
                     html.Div(className="card shadow",children=[
                         html.Div(className="card-header",children=html.H4("Sales Activity Metric 1")),
-                        html.Div(className="card-body",children=html.H5("Card Body"))
+                        html.Div(className="card-body",children=progress)
 
                     ]),
                 ]),
@@ -82,12 +113,20 @@ salesMetrics = html.Div(
 
         ]),
         html.Div(className = "col-lg-4", children = [
-            html.H2(className="mb-2",children="Sales Result"),
+            html.H2(className="mb-4",children="Sales Results"),
                 html.Div(className="row",children=[
                         html.Div(className = "col-lg-12 mb-4", children = [
                         html.Div(className="card shadow",children=[
-                            html.Div(className="card-header",children=html.H4("Sales Result Metric 1")),
-                            html.Div(className="card-body",children=html.H5("Card Body"))
+                            html.Div(className="card-header",children=html.H4("Revenue vs Budget")),
+                            html.Div(className="card-body",
+                                children= daq.Gauge(
+                                        color={"gradient":True,"ranges":{"green":[12,20],"yellow":[8,12],"red":[0,8]}},
+                                        value=8,
+                                        label='$8 MM',
+                                        max=20,
+                                        min=0,
+                                    )  
+                                )
 
                         ]),
                     ]),
