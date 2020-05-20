@@ -23,3 +23,106 @@ header = html.Div(
 
 
 ])
+
+salesMetrics = html.Div(
+    className="row p-4 mb-2",
+    children = [
+        html.Div(className = "col-lg-4", children = [
+            html.H2("Sales Process Metrics"),
+
+        ]),
+        html.Div(className = "col-lg-4", children = [
+            html.H2("Sales Activity Metrics")
+        ]),
+        html.Div(className = "col-lg-4", children = [
+            html.H2("Sales Result Metrics")
+        ]),
+    ]
+)
+
+salesMetricResults = html.Div(
+    children=[
+
+    ###### Metric Row
+    html.Div(
+        className="row p-4 mb-2",
+            children = [
+                html.Div(className = "col-lg-4", children = [
+                    html.Div(className="card shadow",children=[
+                        html.Div(className="card-header",children=html.H4("Opportunity")),
+                        html.Div(className="card-body",children=html.H5("Card Body"))
+
+                    ]),
+                ]),
+                html.Div(className = "col-lg-4", children = [
+                                    html.Div(className="card shadow",children=[
+                        html.Div(className="card-header",children=html.H4("Opportunity")),
+                        html.Div(className="card-body",children=html.H5("Card Body"))
+
+                    ]),
+                ]),
+                html.Div(className = "col-lg-4", children = [
+                                    html.Div(className="card shadow",children=[
+                        html.Div(className="card-header",children=html.H4("Opportunity")),
+                        html.Div(className="card-body",children=html.H5("Card Body"))
+
+                    ]),
+                ]),
+            ]
+    ),##### End Metric Row
+    html.Div(
+        className="row p-4 mb-2",
+            children = [
+                html.Div(className = "col-lg-4", children = [
+                    html.Div(className="card shadow",children=[
+                        html.Div(className="card-header",children=html.H4("Opportunity")),
+                        html.Div(className="card-body",children=html.H5("Card Body"))
+
+                    ]),
+                ]),
+                html.Div(className = "col-lg-4", children = [
+                                    html.Div(className="card shadow",children=[
+                        html.Div(className="card-header",children=html.H4("Opportunity")),
+                        html.Div(className="card-body",children=html.H5("Card Body"))
+
+                    ]),
+                ]),
+                html.Div(className = "col-lg-4", children = [
+                                    html.Div(className="card shadow",children=[
+                        html.Div(className="card-header",children=html.H4("Opportunity")),
+                        html.Div(className="card-body",children=html.H5("Card Body"))
+
+                    ]),
+                ]),
+            ]
+    ),##### End Metric Row
+    html.Div(
+        className="row p-4 mb-2",
+            children = [
+                html.Div(className = "col-lg-4", children = [
+                    html.Div(className="card shadow",children=[
+                        html.Div(className="card-header",children=html.H4("Opportunity")),
+                        html.Div(className="card-body",children=html.H5("Card Body"))
+
+                    ]),
+                ]),
+                html.Div(className = "col-lg-4", children = [
+                                    html.Div(className="card shadow",children=[
+                        html.Div(className="card-header",children=html.H4("Opportunity")),
+                        html.Div(className="card-body",children=html.H5("Card Body"))
+
+                    ]),
+                ]),
+                html.Div(className = "col-lg-4", children = [
+                                    html.Div(className="card shadow",children=[
+                        html.Div(className="card-header",children=html.H4("Opportunity")),
+                        html.Div(className="card-body",children=html.H5("Card Body"))
+
+                    ]),
+                ]),
+            ]
+    ),##### End Metric Row
+    ]
+)
+############################################################### End of salesMetricResults
+
