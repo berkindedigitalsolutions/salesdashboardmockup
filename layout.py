@@ -161,7 +161,7 @@ salesMetrics = html.Div(
                 ]),
                 html.Div(className = "col-lg-12 mb-4", children = [
                         html.Div(className="card shadow",children=[
-                        html.Div(className="card-header",children=html.H4("Sales Activity Metric 3")),
+                        html.Div(className="card-header",children=html.H4("Opportunity Initiatives")),
                         html.Div(className="card-body",children=opportunity_initiatives)
 
                     ]),
