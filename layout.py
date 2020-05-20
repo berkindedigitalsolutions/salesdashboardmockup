@@ -35,20 +35,21 @@ customer_intelligence_fig = dcc.Graph(
 
 
 #####################################################################################
-progress = html.Div(
+customer_intelligence_progress = html.Div(
     className="col-8",
     children = [
-        html.H4(className="medium font-weight-bold",children=[
-            html.P('Key Account Plans Created'),
-            html.Div(className="progress mb-4",
-            children=html.Div(
-                className="progress-bar",
-                role="progressbar",
-     
-            )
-            )
-            
-        ])
+        html.H5(className="medium font-weight-bold",children='Key Account Plans Created'),
+        dbc.Progress("70%",className="mb-4",style={"height": "20px","font-size":"12px"}, value=70),
+        html.H5(className="medium font-weight-bold",children='Date of Last Purchase'),
+        dbc.Progress("40%",className="mb-4",style={"height": "20px","font-size":"12px"}, value=40),
+        html.H5(className="medium font-weight-bold",children='Incumbant Vendor'),
+        dbc.Progress("15%",className="mb-4",style={"height": "20px","font-size":"12px"}, value=15),
+        html.H5(className="medium font-weight-bold",children='Purchase Occasion Identified'),
+        dbc.Progress("10%",className="mb-4",style={"height": "20px","font-size":"12px"}, value=10),
+        html.H5(className="medium font-weight-bold",children='Key Decision Maker'),
+        dbc.Progress("18%",className="mb-4",style={"height": "20px","font-size":"12px"}, value=18),
+
+
     ]
 )
 
@@ -90,8 +91,8 @@ salesMetrics = html.Div(
             html.Div(className="row",children=[
                     html.Div(className = "col-lg-12 mb-4", children = [
                     html.Div(className="card shadow",children=[
-                        html.Div(className="card-header",children=html.H4("Sales Activity Metric 1")),
-                        html.Div(className="card-body",children=progress)
+                        html.Div(className="card-header",children=html.H4("Customer Intelligence")),
+                        html.Div(className="card-body",children=customer_intelligence_progress)
 
                     ]),
                 ]),
