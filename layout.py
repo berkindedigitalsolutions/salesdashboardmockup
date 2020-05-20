@@ -70,7 +70,47 @@ opportunity_df = pd.DataFrame(
 opportunity_table = dbc.Table.from_dataframe(opportunity_df, striped=True, bordered=True, hover=True)
 
 ################################## TABLE ###################################################
+opportunity_initiatives = html.Div(
+    className="row",
+    children=[
 
+    
+    html.Div(className="col-4",
+    children=[
+        daq.Gauge(
+                    color={"gradient":True,"ranges":{"green":[12,20],"yellow":[8,12],"red":[0,8]}},
+                    value=5,
+                    label='# of New Opportunities',
+                    max=20,
+                    min=0,
+                    size=110
+                )  
+    ]),
+        html.Div(className="col-4",
+    children=[
+        daq.Gauge(
+                    color={"gradient":True,"ranges":{"green":[12,20],"yellow":[8,12],"red":[0,8]}},
+                    value=15,
+                    label='Leads to Prospects',
+                    max=20,
+                    min=0,
+                    size=110
+                )  
+    ]),
+        html.Div(className="col-4",
+    children=[
+        daq.Gauge(
+                    color={"gradient":True,"ranges":{"green":[12,20],"yellow":[8,12],"red":[0,8]}},
+                    value=4,
+                    label='Prospects to Customers',
+                    max=20,
+                    min=0,
+                    size=110
+                )  
+    ]),
+
+])
+                                
 
 salesMetrics = html.Div(
     className="row p-4 mb-2",
@@ -122,7 +162,7 @@ salesMetrics = html.Div(
                 html.Div(className = "col-lg-12 mb-4", children = [
                         html.Div(className="card shadow",children=[
                         html.Div(className="card-header",children=html.H4("Sales Activity Metric 3")),
-                        html.Div(className="card-body",children=html.H5("Card Body"))
+                        html.Div(className="card-body",children=opportunity_initiatives)
 
                     ]),
                 ]),
