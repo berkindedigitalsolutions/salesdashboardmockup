@@ -33,5 +33,13 @@ traitlets==4.3.2
 urllib3==1.25.7
 Werkzeug==0.16.0
 xlrd==1.2.0
-
+attrs==19.3.0
+dash-bootstrap-components==0.10.0
+Flask-SeaSurf==0.2.2
+importlib-metadata==1.6.0
+jsonschema==3.2.0
+pyrsistent==0.16.0
+ua-parser==0.10.0
+webencodings==0.5.1
+zipp==3.1.0
 
