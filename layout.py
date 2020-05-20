@@ -69,6 +69,19 @@ opportunity_df = pd.DataFrame(
 
 opportunity_table = dbc.Table.from_dataframe(opportunity_df, striped=True, bordered=True, hover=True)
 
+rep_df = pd.DataFrame(
+    {
+        "Sales Rep": ["Rep 1", "Rep 2", "Rep 3","Rep 4","Rep 5"],
+        "Current": ["$60k", "$50k", "$50k","$40k","$20k"],
+        "Target": ["$120k", "$120k", "$120k","$120k","$120k"],
+        "Change":["+10k","+10k","+20k","+5k","+5k"],
+
+
+    }
+)
+
+
+rep_performance_table = dbc.Table.from_dataframe(rep_df, striped=True, bordered=True, hover=True)
 ################################## TABLE ###################################################
 opportunity_initiatives = html.Div(
     className="row",
@@ -189,8 +202,10 @@ salesMetrics = html.Div(
                     ]),
                     html.Div(className = "col-lg-12 mb-4", children = [
                                         html.Div(className="card shadow",children=[
-                            html.Div(className="card-header",children=html.H4("Sales Result Metric 2")),
-                            html.Div(className="card-body",children=html.H5("Card Body"))
+                            html.Div(className="card-header",children=html.H4("Sales Rep Performance")),
+                            html.Div(className="card-body",children=[
+                                html.H5(className="mb-2",children="QTD Closed Revenue"),
+                                rep_performance_table])
 
                         ]),
                     ]),
