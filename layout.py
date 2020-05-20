@@ -36,24 +36,40 @@ customer_intelligence_fig = dcc.Graph(
 
 #####################################################################################
 customer_intelligence_progress = html.Div(
-    className="col-8",
+    className="col-12",
     children = [
         html.H5(className="medium font-weight-bold",children='Key Account Plans Created'),
-        dbc.Progress("70%",className="mb-4",style={"height": "20px","font-size":"12px"}, value=70),
+        dbc.Progress("70%",color="success",className="mb-4",style={"height": "20px","font-size":"12px"}, value=70),
         html.H5(className="medium font-weight-bold",children='Date of Last Purchase'),
-        dbc.Progress("40%",className="mb-4",style={"height": "20px","font-size":"12px"}, value=40),
+        dbc.Progress("40%",color="warning",className="mb-4",style={"height": "20px","font-size":"12px"}, value=40),
         html.H5(className="medium font-weight-bold",children='Incumbant Vendor'),
-        dbc.Progress("15%",className="mb-4",style={"height": "20px","font-size":"12px"}, value=15),
+        dbc.Progress("15%",color="danger",className="mb-4",style={"height": "20px","font-size":"12px"}, value=15),
         html.H5(className="medium font-weight-bold",children='Purchase Occasion Identified'),
-        dbc.Progress("10%",className="mb-4",style={"height": "20px","font-size":"12px"}, value=10),
+        dbc.Progress("10%",color="danger",className="mb-4",style={"height": "20px","font-size":"12px"}, value=10),
         html.H5(className="medium font-weight-bold",children='Key Decision Maker'),
-        dbc.Progress("18%",className="mb-4",style={"height": "20px","font-size":"12px"}, value=18),
+        dbc.Progress("18%",color="danger",className="mb-4",style={"height": "20px","font-size":"12px"}, value=18),
 
 
     ]
 )
+#####################################################################################
 
+################################## TABLE ###################################################
+opportunity_df = pd.DataFrame(
+    {
+        "Account": ["ABC Stone", "Stone Masons", "Ashlars Co"],
+        "Entry": ["May 5", "May 12", "May 15"],
+        "Exp. Close": ["June 5", "Jun 30", "June 30"],
+        "Opp.":["Ashlars","Firepits","Ashlars"],
+        "Prob":["85%","50%","50%"],
+        "Revenue":["$50,000","$25,000","$12,000"]
 
+    }
+)
+
+opportunity_table = dbc.Table.from_dataframe(opportunity_df, striped=True, bordered=True, hover=True)
+
+################################## TABLE ###################################################
 
 
 salesMetrics = html.Div(
@@ -98,8 +114,8 @@ salesMetrics = html.Div(
                 ]),
                 html.Div(className = "col-lg-12 mb-4", children = [
                                     html.Div(className="card shadow",children=[
-                        html.Div(className="card-header",children=html.H4("Sales Activity Metric 2")),
-                        html.Div(className="card-body",children=html.H5("Card Body"))
+                        html.Div(className="card-header",children=html.H4("Sales Opportunities")),
+                        html.Div(className="card-body",children=opportunity_table)
 
                     ]),
                 ]),
