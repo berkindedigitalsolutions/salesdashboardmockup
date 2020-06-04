@@ -20,7 +20,7 @@ header = html.Div(
         style = {'background':'#ce9d2a','color':'#FFF','marginLeft':'0','marginRight':'0'},
         children = [
             
-            html.H1(style={'marginRight':'0'}, children="DG VOLO & COMPANY"),
+            html.H1(className="text-center mx-auto",style={'marginRight':'0'}, children="DG VOLO & COMPANY"),
 
 
 ])
