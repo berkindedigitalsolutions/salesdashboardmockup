@@ -104,7 +104,7 @@ opportunity_initiatives = html.Div(
         daq.Gauge(
                     color={"gradient":True,"ranges":{"green":[12,20],"yellow":[8,12],"red":[0,8]}},
                     value=15,
-                    label='Leads to Prospects',
+                    label='# of Leads to Prospects',
                     max=20,
                     min=0,
                     size=110
@@ -115,7 +115,7 @@ opportunity_initiatives = html.Div(
         daq.Gauge(
                     color={"gradient":True,"ranges":{"green":[12,20],"yellow":[8,12],"red":[0,8]}},
                     value=4,
-                    label='Prospects to Customers',
+                    label='# of Prospects to Customers',
                     max=20,
                     min=0,
                     size=110
@@ -128,33 +128,7 @@ opportunity_initiatives = html.Div(
 salesMetrics = html.Div(
     className="row p-4 mb-2",
     children = [
-        html.Div(className = "col-lg-4", children = [
-            html.H2(className="mb-4",children="Sales Process"),
-            html.Div(className="row",children=[
-                    html.Div(className = "col-lg-12 mb-4", children = [
-                    html.Div(className="card shadow",children=[
-                        html.Div(className="card-header",children=html.H4("Sales Process Metric 1")),
-                        html.Div(className="card-body",children=html.H5("Card Body"))
 
-                    ]),
-                ]),
-                html.Div(className = "col-lg-12 mb-4", children = [
-                                    html.Div(className="card shadow",children=[
-                        html.Div(className="card-header",children=html.H4("Sales Process Metric 2")),
-                        html.Div(className="card-body",children=html.H5("Card Body"))
-
-                    ]),
-                ]),
-                html.Div(className = "col-lg-12 mb-4", children = [
-                        html.Div(className="card shadow",children=[
-                        html.Div(className="card-header",children=html.H4("Sales Process Metric 3")),
-                        html.Div(className="card-body",children=html.H5("Card Body"))
-
-                    ]),
-                ]),
-            ]),
-   
-        ]),
         html.Div(className = "col-lg-4", children = [
             html.H2(className="mb-4",children="Sales Activity"),
             html.Div(className="row",children=[
@@ -217,7 +191,34 @@ salesMetrics = html.Div(
                         ]),
                     ]),
                 ]),
-            ])
+            ]),
+                    html.Div(className = "col-lg-4", children = [
+            html.H2(className="mb-4",children="Sales Process"),
+            html.Div(className="row",children=[
+                    html.Div(className = "col-lg-12 mb-4", children = [
+                    html.Div(className="card shadow",children=[
+                        html.Div(className="card-header",children=html.H4("Sales Process Metric 1")),
+                        html.Div(className="card-body",children=html.H5("Card Body"))
+
+                    ]),
+                ]),
+                html.Div(className = "col-lg-12 mb-4", children = [
+                                    html.Div(className="card shadow",children=[
+                        html.Div(className="card-header",children=html.H4("Sales Process Metric 2")),
+                        html.Div(className="card-body",children=html.H5("Card Body"))
+
+                    ]),
+                ]),
+                html.Div(className = "col-lg-12 mb-4", children = [
+                        html.Div(className="card shadow",children=[
+                        html.Div(className="card-header",children=html.H4("Sales Process Metric 3")),
+                        html.Div(className="card-body",children=html.H5("Card Body"))
+
+                    ]),
+                ]),
+            ]),
+   
+        ]),
 
 ])#end metrics
 
