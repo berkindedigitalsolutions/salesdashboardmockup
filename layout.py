@@ -16,7 +16,7 @@ import dash_bootstrap_components as dbc
 
 #making some changes
 header = html.Div(
-        className = "row mb-2 p-4",
+        className = "row mb-2 p-4 text-center",
         style = {'background':'#ce9d2a','color':'#FFF','marginLeft':'0','marginRight':'0'},
         children = [
             
